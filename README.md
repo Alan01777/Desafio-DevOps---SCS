@@ -38,7 +38,6 @@ Você irá:
 - Container laravel (base: php:8.2-fpm-alpine)
 - Container nginx (para servir o Laravel)
 - Container postgres (banco de dados)
-- Teste o acesso local (curl http://localhost → retorna página Laravel)
 
 ## 2. Adicione o Reverse Proxy
 
