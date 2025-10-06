@@ -11,8 +11,8 @@ Nesta atividade, você será desafiado a construir, passo a passo, uma infraestr
   - [Visão geral](#visão-geral)
   - [1. Crie a stack Laravel](#1-crie-a-stack-laravel)
   - [2. Adicione o Reverse Proxy](#2-adicione-o-reverse-proxy)
-  - [3. Suba a stack Graylog](#3-suba-a-stack-graylog)
-  - [4. Envie os logs](#4-envie-os-logs)
+  - [3. (extra) Suba a stack Graylog](#3-extra-suba-a-stack-graylog)
+  - [4. (extra) Envie os logs](#4-extra-envie-os-logs)
   - [5. Observações](#5-observações)
   - [6. Extra:](#6-extra)
   - [7. Resultado Esperado](#7-resultado-esperado)
@@ -28,8 +28,8 @@ Você irá:
 
 1. **Containerizar uma aplicação Laravel**, utilizando PHP-FPM e PostgreSQL;
 2. **Servir a aplicação por meio de um reverse proxy** (Nginx ou Traefik), que será o único ponto de entrada da stack;
-3. **Configurar a stack do Graylog** (com MongoDB e Elasticsearch) para **coletar e centralizar logs** de todos os containers;
-4. **Ajustar o Laravel e o PHP-FPM** para que os logs da aplicação também sejam enviados para o Graylog.
+3. **(extra) Configurar a stack do Graylog** (com MongoDB e Elasticsearch) para **coletar e centralizar logs** de todos os containers;
+4. **(extra) Ajustar o Laravel e o PHP-FPM** para que os logs da aplicação também sejam enviados para o Graylog.
 
 ---
 
@@ -46,7 +46,7 @@ Você irá:
 - Expor apenas o proxy para o host.
 - Adicionar labels no docker-compose.yml se usar Traefik.
 
-## 3. Suba a stack Graylog
+## 3. (extra) Suba a stack Graylog
 
 - Containers:
   - graylog
@@ -55,7 +55,7 @@ Você irá:
 - Graylog disponível em http://localhost:9000
 - Crie um input do tipo GELF UDP na porta 12201.
 
-## 4. Envie os logs
+## 4. (extra) Envie os logs
 
 - Configure o container nginx e laravel para enviar logs via GELF.
 
